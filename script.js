@@ -90,8 +90,7 @@ function checkout(){
     ).join("\n");
 
     emailjs.send(
-        "service_53jwgjx",
-        "template_nh67tqu",
+        "service_53jwgjx","template_tr6ndyd",
         {
             Nombre:nombre,
             Direccion:direccion,

@@ -2,7 +2,7 @@ body{
     font-family: 'Poppins', sans-serif;
     background-image: url(./imagenes/fondo1.JPG);
     background-size: contain;
-    
+
     color: rgb(146, 126, 27);
     font-variant: Arial;
     text-align:center;
@@ -16,7 +16,18 @@ body{
     justify-items: center;
 
 }
-
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background: #2eaef3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 1000;
+}
 .Producto{
 
     background: #6b84dc49;
@@ -107,6 +118,9 @@ img{
 }
 
 @media(max-width:768px){
+    header{
+        flex-direction: column;
+    }
     .contenedor-productos{
         grid-template-columns: 
         1fr;
