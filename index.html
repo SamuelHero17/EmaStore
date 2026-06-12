@@ -3,311 +3,280 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>El Mejillón</title>
+    <title>Ema Store | Premiaciones Deportivas</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script>
-emailjs.init("lhtDzhwP480q720Ih");
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
 
 <body>
 
-<header>
+    <!-- HEADER -->
 
-<img src="imagenes/LogoEma.png" class="logo">
+    <header>
 
-<nav>
-<a href="#medallas">Medallas</a>
-<a href="#trofeos">Trofeos</a>
-<a href="#llaveros">Llaveros</a>
-<a href="#piezas">Piezas</a>
-</nav>
+        <div class="logo-container">
+            <img src="imagenes/logoema.png" alt="Logo" class="logo">
+            <h2>Ema Store</h2>
+        </div>
 
-</header>
+        <nav>
+            <a href="#medallas">Medallas</a>
+            <a href="#trofeos">Trofeos</a>
+            <a href="#llaveros">Llaveros</a>
+            <a href="#piezas">Piezas</a>
+        </nav>
 
-<section class="hero">
+    </header>
 
-<h1>Premiaciones Deportivas El Mejillón</h1>
+    <!-- HERO -->
 
-<h2>
-Medallas, trofeos, llaveros y piezas para tus eventos
-</h2>
+    <section class="hero">
 
-</section>
+        <div class="hero-content">
 
-<div class="layout-principal">
+            <h1>🏆 Premiaciones Deportivas El Mejillón</h1>
 
-<!-- CATALOGO -->
+            <p>
+                Medallas, Trofeos, Llaveros y Piezas para cualquier evento deportivo.
+            </p>
 
-<div>
+            <a href="#medallas" class="btn-principal">
+                Ver Catálogo
+            </a>
 
-<!-- MEDALLAS -->
+        </div>
 
-<section id="medallas">
+    </section>
 
-<h2 class="titulo-seccion">
-🏅 MEDALLAS
-</h2>
+    <!-- CONTENEDOR PRINCIPAL -->
 
-<div class="grid-productos">
+    <div class="layout-principal">
 
-<div class="Producto">
+        <!-- CATÁLOGO -->
 
-<img src="imagenes/medalla1.jpg">
+        <main>
 
-<h3>Medalla Oro</h3>
+            <!-- MEDALLAS -->
 
-<h2>$35</h2>
+            <section id="medallas">
 
-<p>Metal fundido</p>
+                <h2 class="titulo-seccion">
+                    🏅 MEDALLAS
+                </h2>
 
-<input
-type="number"
-id="medalla1"
-value="10"
-min="10">
+                <div class="grid-productos">
 
-<button
-onclick="agregarProductoCantidad(
-'Medalla Oro',
-35,
-'medalla1'
-)">
-Agregar al carrito
-</button>
+                    <div class="Producto">
 
-</div>
-<div class="Producto">
+                        <img src="imagenes/placeholder.jpg" alt="Medalla Oro">
 
-<img src="imagenes/medalla1.jpg">
+                        <h3>Medalla Oro</h3>
 
-<h3>Medalla plata</h3>
+                        <p>Metal fundido premium</p>
 
-<h2>$35</h2>
+                        <h2>$35</h2>
 
-<p>Metal fundido</p>
+                        <input type="number" id="medalla1" min="1" value="1">
 
-<input
-type="number"
-id="medalla2"
-value="10"
-min="10">
+                        <button onclick="agregarProductoCantidad('Medalla Oro',35,'medalla1')">
+                            Agregar al carrito
+                        </button>
 
-<button
-onclick="agregarProductoCantidad(
-'Medalla plata',
-35,
-'medalla2'
-)">
-Agregar al carrito
-</button>
+                    </div>
 
-</div>
-<div class="Producto">
+                    <div class="Producto">
 
-<img src="imagenes/medalla1.jpg">
+                        <img src="imagenes/placeholder.jpg" alt="Medalla Plata">
 
-<h3>Medalla bronce</h3>
+                        <h3>Medalla Plata</h3>
 
-<h2>$35</h2>
+                        <p>Metal fundido premium</p>
 
-<p>Metal fundido</p>
+                        <h2>$25</h2>
 
-<input
-type="number"
-id="medalla3"
-value="10"
-min="10">
+                        <input type="number" id="medalla2" min="1" value="1">
 
-<button
-onclick="agregarProductoCantidad(
-'Medalla bronce',
-35,
-'medalla3'
-)">
-Agregar al carrito
-</button>
+                        <button onclick="agregarProductoCantidad('Medalla Plata',25,'medalla2')">
+                            Agregar al carrito
+                        </button>
 
-</div>
-</div>
+                    </div>
 
-</section>
+                </div>
 
-<!-- TROFEOS -->
+            </section>
 
-<section id="trofeos">
+            <!-- TROFEOS -->
 
-<h2 class="titulo-seccion">
-🏆 TROFEOS
-</h2>
+            <section id="trofeos">
 
-<div class="grid-productos">
+                <h2 class="titulo-seccion">
+                    🏆 TROFEOS
+                </h2>
 
-<div class="Producto">
+                <div class="grid-productos">
 
-<img src="imagenes/trofeo1.jpg">
+                    <div class="Producto">
 
-<h3>Trofeo Clásico</h3>
+                        <img src="imagenes/placeholder.jpg" alt="Trofeo">
 
-<h2>$300</h2>
+                        <h3>Trofeo Clásico</h3>
 
-<input
-type="number"
-id="trofeo1"
-value="1"
-min="1">
+                        <p>Trofeo deportivo</p>
 
-<button
-onclick="agregarProductoCantidad(
-'Trofeo Clásico',
-300,
-'trofeo1'
-)">
-Agregar al carrito
-</button>
+                        <h2>$300</h2>
 
-</div>
+                        <input type="number" id="trofeo1" min="1" value="1">
 
-</div>
+                        <button onclick="agregarProductoCantidad('Trofeo Clásico',300,'trofeo1')">
+                            Agregar al carrito
+                        </button>
 
-</section>
+                    </div>
 
-<!-- LLAVEROS -->
+                </div>
 
-<section id="llaveros">
+            </section>
 
-<h2 class="titulo-seccion">
-🔑 LLAVEROS
-</h2>
+            <!-- LLAVEROS -->
 
-<div class="grid-productos">
+            <section id="llaveros">
 
-<div class="Producto">
+                <h2 class="titulo-seccion">
+                    🔑 LLAVEROS
+                </h2>
 
-<img src="imagenes/llavero1.jpg">
+                <div class="grid-productos">
 
-<h3>Llavero Balón</h3>
+                    <div class="Producto">
 
-<h2>$10</h2>
+                        <img src="imagenes/placeholder.jpg" alt="Llavero">
 
-<input
-type="number"
-id="llavero1"
-value="1"
-min="1">
+                        <h3>Llavero Balón</h3>
 
-<button
-onclick="agregarProductoCantidad(
-'Llavero Balón',
-10,
-'llavero1'
-)">
-Agregar al carrito
-</button>
+                        <p>Llavero deportivo</p>
 
-</div>
+                        <h2>$15</h2>
 
-</div>
+                        <input type="number" id="llavero1" min="1" value="1">
 
-</section>
+                        <button onclick="agregarProductoCantidad('Llavero Balón',15,'llavero1')">
+                            Agregar al carrito
+                        </button>
 
-<!-- PIEZAS -->
+                    </div>
 
-<section id="piezas">
+                </div>
 
-<h2 class="titulo-seccion">
-⭐ PIEZAS
-</h2>
+            </section>
 
-<div class="grid-productos">
+            <!-- PIEZAS -->
 
-<div class="Producto">
+            <section id="piezas">
 
-<img src="imagenes/pieza1.jpg">
+                <h2 class="titulo-seccion">
+                    ⭐ PIEZAS
+                </h2>
 
-<h3>Águila Dorada</h3>
+                <div class="grid-productos">
 
-<h2>$80</h2>
+                    <div class="Producto">
 
-<input
-type="number"
-id="pieza1"
-value="1"
-min="1">
+                        <img src="imagenes/placeholder.jpg" alt="Pieza">
 
-<button
-onclick="agregarProductoCantidad(
-'Águila Dorada',
-80,
-'pieza1'
-)">
-Agregar al carrito
-</button>
+                        <h3>Águila Dorada</h3>
 
-</div>
+                        <p>Pieza para trofeo</p>
 
-</div>
+                        <h2>$80</h2>
 
-</section>
+                        <input type="number" id="pieza1" min="1" value="1">
 
-</div>
+                        <button onclick="agregarProductoCantidad('Águila Dorada',80,'pieza1')">
+                            Agregar al carrito
+                        </button>
 
-<!-- CARRITO -->
+                    </div>
 
-<aside class="carrito-lateral">
+                </div>
 
-<h2>🛒 CARRITO</h2>
+            </section>
 
-<div id="carrito"></div>
+        </main>
 
-<h3 id="total">
-Total: $0
-</h3>
+        <!-- CARRITO -->
 
-<button onclick="vaciarCarrito()">
-Vaciar carrito
-</button>
+        <aside class="carrito-lateral">
 
-<div class="checkout">
+            <h2>🛒 Carrito</h2>
 
-<input
-type="text"
-id="Nombre"
-placeholder="Nombre">
+            <div id="carrito"></div>
 
-<input
-type="text"
-id="Direccion"
-placeholder="Dirección">
+            <h3 id="total">
+                Total: $0
+            </h3>
 
-<input
-type="tel"
-id="Telefono"
-placeholder="Teléfono">
+            <button onclick="vaciarCarrito()">
+                Vaciar carrito
+            </button>
 
-<button onclick="checkout()">
-Finalizar compra
-</button>
+            <hr>
 
-</div>
+            <div class="checkout">
 
-</aside>
+                <h3>Finalizar compra</h3>
 
-</div>
+                <input
+                    type="text"
+                    id="Nombre"
+                    placeholder="Nombre">
 
-<script src="script.js"></script>
+                <input
+                    type="text"
+                    id="Direccion"
+                    placeholder="Dirección">
+
+                <input
+                    type="tel"
+                    id="Telefono"
+                    placeholder="Teléfono">
+
+                <button onclick="checkout()">
+                    Solicitar cotización
+                </button>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Ema Store | Premiaciones Deportivas
+        </p>
+
+    </footer>
+
+    <script>
+        emailjs.init("TU_PUBLIC_KEY");
+    </script>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
