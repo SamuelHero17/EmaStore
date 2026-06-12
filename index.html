@@ -1,277 +1,313 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        
-        <title>Regalos y detalles</title>
+<html lang="es">
 
-        <meta charset="UTF-8">
+<head>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="style.css">
+<title>El Mejillón</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-         
-    </head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+<script>
+emailjs.init("lhtDzhwP480q720Ih");
+</script>
 
-    </script>
+</head>
 
-    <script>
-        emailjs.init("lhtDzhwP480q720Ih");
-    </script>
-    <body>
-        <header> 
-            <img src="imagenes/LogoEma.png" alt="LogoEma" class="logo">
-            <nav>
-                <a href="#Medallas">Medallas</a>
-                <a href="#trofeos">Trofeos</a>
-                <a href="#figura">Figura</a>
+<body>
 
-            </nav>
-        </header>
-        <section class="hero">
-        <h1>Bienvenidos a la tienda de El Mejillón</h1>
-        <img src="imagenes/Logoema.png"
-        class="logo">
-        <hr>
-        
-        <h2>Aquí encontrarás todo tipo de artículos para Premiaciones deportivas</h2>
-        </section>
-        <hr>
-        <div class="contenedor-productos">
+<header>
 
+<img src="imagenes/LogoEma.png" class="logo">
 
-        <div class="Producto">
-            <h3>Medalla 1</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Medalla 1">
-            <h2>$35</h2>
-            <p>Medalla hecha con metal fundido</p>
-            <button onclick="agregarCarrito('Medalla 1',250)">
-                Agregar al carrito
-            </button>
+<nav>
+<a href="#medallas">Medallas</a>
+<a href="#trofeos">Trofeos</a>
+<a href="#llaveros">Llaveros</a>
+<a href="#piezas">Piezas</a>
+</nav>
 
-        </div>
+</header>
 
-        <div class="Producto">
-            <h3>Medalla 2</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Medalla 2">
-            <h2>$25</h2>
-            <p>Hecha de metal fundido</p>
-            <button onclick="agregarCarrito('Medalla 2',250)">
-                Agregar al carrito
-            </button>
-        </div>
+<section class="hero">
 
-        <div class="Producto">
-            <h3>Medalla 3</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Medalla 3">
-            <h2>$20</h2>
-            <p>Hecha de metal fundido</p>
-            <button onclick="agregarCarrito('Medalla 3',300)">
-                Agregar al carrito
-            </button>
-        </div>
+<h1>Premiaciones Deportivas El Mejillón</h1>
 
-        <div class="Producto">
-            <h3>Medalla 4</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Medalla 4">
-            <h2>$15 cada una</h2>
-            <p>Hecha de metal fundido</p>
-            <button onclick="agregarCarrito('Medalla 4',150)">
-                Agregar al carrito
-            </button>
-        </div>
+<h2>
+Medallas, trofeos, llaveros y piezas para tus eventos
+</h2>
 
-        <div class="Producto">
-            <h3>Medalla 5/h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Medalla 5">
-            <h2>$35</h2>
-            <p>Hecha de metal fundido</p>
-            <button onclick="agregarCarrito('Medalla 5',250)">
-                Agregar al carrito
-            </button>
-        </div>
-<h2>Piezas Para Trofeo</h2>
-        <div class="Producto">
-            <h3>Zápato Z</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Zápato Z">
-            <h2>$35</h2>
-            <p>Hecha con plastico derretido</p>
-            <button onclick="agregarCarrito('Zápato Z',250)">
-                Agregar al carrito
-            </button>
-        </div>
+</section>
 
-        <div class="Producto">
-            <h3>Zápato Estrella</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Zápato Estrella">
-            <h2>$35</h2>
-            <p>Hecha con plastico derretido</p>
-            <button onclick="agregarCarrito('Zápato Estrella',250)">
-                Agregar al carrito
-            </button>
-        </div>
+<div class="layout-principal">
 
-        <div class="Producto">
-            <h3>Águila foga</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Águila foga">
-            <h2>$100</h2>
-            <button onclick="agregarCarrito('Águila foga',400)">
-                Agregar al carrito
-            </button>
-        </div>
+<!-- CATALOGO -->
 
-        <div class="Producto">
-            <h3>Guante</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Flor de cera">
-            <h2>$35</h2>
-            <p>Hecha con plastico derretido</p>
-            <button onclick="agregarCarrito('Flor de cera',250)">
-                Agregar al carrito
-            </button>
-        </div>
+<div>
 
-        <div class="Producto">
-            <h3>Águila chica</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Águila chica">
-            <h2>$90</h2>
-            <p>Hecha con plastico derretido</p>
-            <button onclick="agregarCarrito('Águila chica',300)">
-                Agregar al carrito
-            </button>
-        </div>
+<!-- MEDALLAS -->
 
-        <div class="Producto">
-            <h3>Trofeo mundialista</h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Trofeo mundialista">
-            <h2>$80</h2>
-            <p>Hecha con plastico derretido</p>
-            <button onclick="agregarCarrito('Trofeo mundialista',350)">
-                Agregar al carrito
-            </button>
-        </div>
+<section id="medallas">
 
-        <div class="Producto">
-            <h3>Piña </h3>
-            <img
-            src="imagenes/---.jpg"
-            width="250"
-            alt="Piña">
-            <h2>$250</h2>
-            <p>Hecha con plastico derretido</p>
-            <button onclick="agregarCarrito('Piña',450)">
-                Agregar al carrito
-            </button>
-        </div>
+<h2 class="titulo-seccion">
+🏅 MEDALLAS
+</h2>
 
-        <div class="Producto">
-        <h3>-Producto-</h3>
-        <img
-        src="imagenes/---.JPG"
-        width="250"
-        alt="personalizable">
-        <h2>$300</h2>   
-        <p>:^D</p>    
-        <button onclick="agregarCarrito('-Producto-',300)">
-            Agregar al carrito
-        </button>
-        </div>
+<div class="grid-productos">
 
+<div class="Producto">
 
+<img src="imagenes/medalla1.jpg">
 
-        <div class="Producto">
-        <h3>--:^D--  </h3>
-        
-        <img
-        src="imagenes/---.JPG"
-        width="250"
-        alt="Vela">
-        
-        <h2>$50</h2>
-        <p>^-_^</p>
-        <button onclick="agregarCarrito('--:^D--',200)">
-            Agregar al carrito
-        </button>
-        </div>
-        
+<h3>Medalla Oro</h3>
 
-        <hr>
-//en esta parte se muestra el carrito de compras 
-        <h2> carrito</h2>
-        <div id="carrito"></div>
-        <h3 id="total">
-            Total: $0
-       
-        <script src="script.js"></script>
-        </h3>
-        <hr>
-//aqui se muestra el proceso de check out
-        <h2>>Checkout</h2>
+<h2>$35</h2>
 
-        <div class="checkout">
-            <input
-            type="text"
-            id="Nombre"
-            placeholder="Tu nombre">
+<p>Metal fundido</p>
 
-            <input
-            type="text"
-            id="Direccion"
-            placeholder="Tu direccion">
+<input
+type="number"
+id="medalla1"
+value="10"
+min="10">
 
-            <input
-            type="tel"
-            id="Telefono"
-            placeholder="Tu telefono 10 digitos"
-            maxlength="10"
-            pattern="[0-9]{10}"
-            required>
+<button
+onclick="agregarProductoCantidad(
+'Medalla Oro',
+35,
+'medalla1'
+)">
+Agregar al carrito
+</button>
 
-            <button onclick="checkout()">
-                Finalizar compra
-                </button>
-        </div>
-       
+</div>
+<div class="Producto">
 
-    </body>
+<img src="imagenes/medalla1.jpg">
+
+<h3>Medalla plata</h3>
+
+<h2>$35</h2>
+
+<p>Metal fundido</p>
+
+<input
+type="number"
+id="medalla2"
+value="10"
+min="10">
+
+<button
+onclick="agregarProductoCantidad(
+'Medalla plata',
+35,
+'medalla2'
+)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="Producto">
+
+<img src="imagenes/medalla1.jpg">
+
+<h3>Medalla bronce</h3>
+
+<h2>$35</h2>
+
+<p>Metal fundido</p>
+
+<input
+type="number"
+id="medalla3"
+value="10"
+min="10">
+
+<button
+onclick="agregarProductoCantidad(
+'Medalla bronce',
+35,
+'medalla3'
+)">
+Agregar al carrito
+</button>
+
+</div>
+</div>
+
+</section>
+
+<!-- TROFEOS -->
+
+<section id="trofeos">
+
+<h2 class="titulo-seccion">
+🏆 TROFEOS
+</h2>
+
+<div class="grid-productos">
+
+<div class="Producto">
+
+<img src="imagenes/trofeo1.jpg">
+
+<h3>Trofeo Clásico</h3>
+
+<h2>$300</h2>
+
+<input
+type="number"
+id="trofeo1"
+value="1"
+min="1">
+
+<button
+onclick="agregarProductoCantidad(
+'Trofeo Clásico',
+300,
+'trofeo1'
+)">
+Agregar al carrito
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LLAVEROS -->
+
+<section id="llaveros">
+
+<h2 class="titulo-seccion">
+🔑 LLAVEROS
+</h2>
+
+<div class="grid-productos">
+
+<div class="Producto">
+
+<img src="imagenes/llavero1.jpg">
+
+<h3>Llavero Balón</h3>
+
+<h2>$10</h2>
+
+<input
+type="number"
+id="llavero1"
+value="1"
+min="1">
+
+<button
+onclick="agregarProductoCantidad(
+'Llavero Balón',
+10,
+'llavero1'
+)">
+Agregar al carrito
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PIEZAS -->
+
+<section id="piezas">
+
+<h2 class="titulo-seccion">
+⭐ PIEZAS
+</h2>
+
+<div class="grid-productos">
+
+<div class="Producto">
+
+<img src="imagenes/pieza1.jpg">
+
+<h3>Águila Dorada</h3>
+
+<h2>$80</h2>
+
+<input
+type="number"
+id="pieza1"
+value="1"
+min="1">
+
+<button
+onclick="agregarProductoCantidad(
+'Águila Dorada',
+80,
+'pieza1'
+)">
+Agregar al carrito
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- CARRITO -->
+
+<aside class="carrito-lateral">
+
+<h2>🛒 CARRITO</h2>
+
+<div id="carrito"></div>
+
+<h3 id="total">
+Total: $0
+</h3>
+
+<button onclick="vaciarCarrito()">
+Vaciar carrito
+</button>
+
+<div class="checkout">
+
+<input
+type="text"
+id="Nombre"
+placeholder="Nombre">
+
+<input
+type="text"
+id="Direccion"
+placeholder="Dirección">
+
+<input
+type="tel"
+id="Telefono"
+placeholder="Teléfono">
+
+<button onclick="checkout()">
+Finalizar compra
+</button>
+
+</div>
+
+</aside>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>

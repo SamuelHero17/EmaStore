@@ -1,51 +1,72 @@
 let carrito = [];
-//agrega el producto al carrito//
-function agregarCarrito(nombre, precio){
+
+function agregarProductoCantidad(
+    nombre,
+    precio,
+    idCantidad
+){
+
+    let cantidad = parseInt(
+        document.getElementById(idCantidad).value
+    );
 
     carrito.push({
-        nombre:nombre,
-        precio:precio
+        nombre,
+        precio,
+        cantidad
     });
 
     actualizarCarrito();
 }
-//muestra el producto agregado al carrito//
+
 function actualizarCarrito(){
 
     let contenedor =
     document.getElementById("carrito");
 
-    contenedor.innerHTML = " ";
+    contenedor.innerHTML = "";
 
     let total = 0;
 
-    carrito.forEach(function(producto,index){
+    carrito.forEach((producto,index)=>{
 
-        total += producto.precio;
+        let subtotal =
+        producto.precio *
+        producto.cantidad;
+
+        total += subtotal;
 
         contenedor.innerHTML += `
-        
+
         <div class="item-carrito">
-            
+
             <p>
-                ${producto.nombre}
-                -${producto.precio}
-                </p>
-            
-                
-                <button onclick="eliminarProducto(${index})">
-                    eliminar del carrito
-                </button> 
+            ${producto.nombre}
+            </p>
+
+            <p>
+            ${producto.cantidad} x $${producto.precio}
+            </p>
+
+            <strong>
+            $${subtotal}
+            </strong>
+
+            <button
+            onclick="eliminarProducto(${index})">
+            Eliminar
+            </button>
+
         </div>
+
         `;
-        
     });
 
     document.getElementById("total")
     .textContent =
-    "total: $" + total;
+    "Total: $" + total;
 }
-//borra del carrito///
+
 function eliminarProducto(index){
 
     carrito.splice(index,1);
@@ -53,58 +74,81 @@ function eliminarProducto(index){
     actualizarCarrito();
 }
 
-//finaliza la compra//
+function vaciarCarrito(){
+
+    carrito = [];
+
+    actualizarCarrito();
+}
 
 function checkout(){
-    let nombre=
+
+    let nombre =
     document.getElementById("Nombre").value;
 
-    let direccion=
+    let direccion =
     document.getElementById("Direccion").value;
 
-    let telefono=
+    let telefono =
     document.getElementById("Telefono").value;
-    if(telefono.length !== 10){
-        alert("Su número debe contener 10 digitos");
-        return;
-    }
 
     if(carrito.length === 0){
-        alert("tu carrito esta vacio");
+
+        alert(
+        "Tu carrito está vacío"
+        );
+
         return;
     }
-    
-    alert(
-        "Pedido en proceso nos contactaremos contigo pronto :)\n\n" +
-        "cliente: " + nombre + "\n" +
-        "direccion: " + direccion + "\n" +
-        "telefono: " + telefono + "\n" +
-        "Total: $" + carrito.reduce((total,producto) => total + producto.precio,0)
-    );
-    
 
-    let productosTexto = carrito.map(
-        function(producto){
-            return producto.nombre+ "\n"+ " - $" + producto.precio;
-        }
+    let total =
+    carrito.reduce(
+        (acum,producto)=>
+
+        acum +
+        producto.precio *
+        producto.cantidad
+
+    ,0);
+
+    let productosTexto =
+    carrito.map(producto =>
+
+        `${producto.nombre}
+        x${producto.cantidad}
+        = $${producto.precio * producto.cantidad}`
+
     ).join("\n");
 
+    alert(
+
+`Pedido recibido
+
+Cliente: ${nombre}
+
+Dirección: ${direccion}
+
+Teléfono: ${telefono}
+
+${productosTexto}
+
+TOTAL: $${total}`
+
+    );
+
     emailjs.send(
-        "service_53jwgjx","template_tr6ndyd",
+        "service_53jwgjx",
+        "template_tr6ndyd",
         {
             Nombre:nombre,
             Direccion:direccion,
             Telefono:telefono,
             productos:productosTexto,
-            total: "$" + carrito.reduce((total,producto) => total + producto.precio,0)
+            total:"$"+total
         }
-    )
-    .then(function(response){
-        console.log("Hemos recibido tu pedido, nos pondremos en contacto contigo pronto!", response);
-        carrito = [];
+    );
+
+    carrito = [];
+
     actualizarCarrito();
-    })
-    .catch(function(error){
-        console.log("Failed...", error);
-    });
 }
