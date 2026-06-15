@@ -18,6 +18,47 @@ function agregarProductoCantidad(
 
     actualizarCarrito();
 }
+document.querySelectorAll(".slider")
+.forEach(slider=>{
+
+    let slides =
+    slider.querySelectorAll(".slide");
+
+    let index = 0;
+
+    slider
+    .querySelector(".next")
+    .addEventListener("click",()=>{
+
+        slides[index]
+        .classList.remove("activa");
+
+        index =
+        (index+1)
+        % slides.length;
+
+        slides[index]
+        .classList.add("activa");
+    });
+
+    slider
+    .querySelector(".prev")
+    .addEventListener("click",()=>{
+
+        slides[index]
+        .classList.remove("activa");
+
+        index =
+        (index-1+
+        slides.length)
+        %
+        slides.length;
+
+        slides[index]
+        .classList.add("activa");
+    });
+
+});
 
 function actualizarCarrito(){
 

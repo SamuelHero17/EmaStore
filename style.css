@@ -103,6 +103,40 @@ h3{
 
     transition:.3s;
 }
+.slider{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+.slide.activa{
+    display: block;
+}
+.prev,
+.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0, 0, .6);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.prev{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
 
 .Producto:hover{
     transform:translateY(-10px);
