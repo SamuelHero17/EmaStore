@@ -13,7 +13,8 @@ function agregarProductoCantidad(
     carrito.push({
         nombre,
         precio,
-        cantidad
+        cantidad,
+        Color 
     });
 
     actualizarCarrito();
