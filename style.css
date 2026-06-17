@@ -238,6 +238,22 @@ button:hover{
     border:none;
     border-radius:10px;
 }
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:30px;
+color:white;
+text-decoration:none;
+}
+
 
 @media(max-width:900px){
 
