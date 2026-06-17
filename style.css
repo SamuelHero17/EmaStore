@@ -34,7 +34,7 @@ header{
 }
 
 .logo{
-    width:120px;
+    width:190px;
 }
 
 nav{
@@ -291,7 +291,7 @@ text-decoration:none;
 header{
     position:sticky;
     top:0;
-    z-index: index 100%;;
+    z-index: index 100%;
 
     background:#1a1a1a;
     padding:10px;
