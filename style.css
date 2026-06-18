@@ -311,6 +311,7 @@ header{
 .grid-productos{
 
     grid-template-columns:1fr;
+    align-items: center;
 
 }
 .Producto{
@@ -323,7 +324,7 @@ header{
     align-items: flex-end;
 }
 .slider{
-    position: absolute;
+    position: relative;
     inset: 0;
 
     width: 100%;
@@ -339,7 +340,7 @@ header{
 
 .Producto::after{
     content: "";
-    position: absolute;
+    position: fixed;
     inset: 0;
     background: 
     linear-gradient(
