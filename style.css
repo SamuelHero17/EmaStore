@@ -313,4 +313,61 @@ header{
     grid-template-columns:1fr;
 
 }
+.Producto{
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: flex-end;
+}
+.slider{
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.Producto::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.95) 0%,
+        rgba(0,0,0,.75) 35%,
+        rgba(0,0,0,.25) 70%
+        transparent 100%
+    );
+    z-index: 2;
+}
+.contenido-producto{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 20px;
+    color: white;
+
+}
+.contenido-producto h3,
+.contenido-producto p{
+    color: grey;
+}
+.contenido-producto h2{
+    color:#FFD700;
+}
+.prev,
+.next{
+    z-index: 4;
+}
 }
