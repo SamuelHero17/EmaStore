@@ -23,7 +23,7 @@ body{
 header{
     position:sticky;
     top:0;
-    z-index: index 100%;;
+    z-index:999;
 
     background:#1a1a1a;
     padding:10px;
@@ -104,10 +104,11 @@ h3{
     transition:.3s;
 }
 .slider{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 250px;
     overflow: hidden;
+    inset:0;
 }
 .slide{
     width: 100%;
@@ -311,7 +312,7 @@ header{
 .grid-productos{
 
     grid-template-columns:1fr;
-    align-items: center;
+    
 
 }
 .Producto{
@@ -340,14 +341,14 @@ header{
 
 .Producto::after{
     content: "";
-    position: fixed;
+    position: absolute;
     inset: 0;
     background: 
     linear-gradient(
         to top,
         rgba(0,0,0,.95) 0%,
         rgba(0,0,0,.75) 35%,
-        rgba(0,0,0,.25) 70%
+        rgba(0,0,0,.25) 70%,
         transparent 100%
     );
     z-index: 2;
